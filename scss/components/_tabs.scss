@@ -1,0 +1,41 @@
+.tabs {
+	display: flex;
+	margin: -0.75rem;
+	li {
+		position: relative;
+		padding: 0.75rem;
+		width: calc(100% / 3);
+		p {
+			font-weight: 600;
+			border-radius: 0.6rem 0.6rem 0 0;
+			background-color: $main-cl;
+			padding: 1.5rem 3rem;
+			color: $t-w-cl;
+			text-align: center;
+			transition: $t1;
+		}
+		&:hover {
+			p {
+				color: $main-cl;
+				background-color: $four-cl;
+			}
+		}
+	}
+	li.--active {
+		p {
+			background-color: $four-cl;
+			font-weight: 900;
+			color: $main-cl;
+		}
+	}
+}
+.tab-link {
+	cursor: pointer;
+}
+.tab-content {
+	display: none;
+	&.--active {
+		display: block;
+		animation: fadeIn $t2 forwards;
+	}
+}

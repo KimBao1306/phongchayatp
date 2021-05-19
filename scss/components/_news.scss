@@ -1,0 +1,133 @@
+.date {
+	display: flex;
+	align-items: center;
+	img {
+		margin-right: 1rem;
+	}
+}
+
+.c-news {
+	&-img {
+		overflow: hidden;
+		padding-bottom: 70.272%;
+		img {
+			transition: $t1;
+		}
+		.news-title-hover {
+			transform: scale(0.8);
+			@include hidden;
+		}
+	}
+	&-img.video-popup {
+		&:before {
+			display: none;
+		}
+	}
+	&-seemore {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		padding: 1rem;
+		font-size: 1.4rem;
+		background-color: $main-cl;
+		color: $t-w-cl;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		transition: $t1;
+		transform: translateY(100%);
+		&:hover {
+			color: $t-w-cl;
+			background-color: $main-2-cl;
+		}
+	}
+	&-content {
+		padding-top: 1.5rem;
+		.main-title {
+			@include overtext(2);
+		}
+		.desc {
+			color: $desc-cl;
+			@include overtext(3);
+		}
+	}
+	&-seeall {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		max-height: 26rem;
+	}
+	&:hover {
+		.news-title-hover {
+			transform: scale(1);
+			@include visible;
+		}
+		.c-news-seemore {
+			transform: translateY(0);
+		}
+	}
+}
+.c-news-aside {
+	display: flex;
+	overflow: hidden;
+	.c-news-img {
+		width: 9rem;
+		height: 8rem;
+		flex-shrink: 0;
+		padding-bottom: 0;
+	}
+	.c-news-content {
+		width: calc(100% - 9rem);
+		padding-left: 1.2rem;
+		padding-top: 0;
+	}
+	.main-title {
+		@include overtext(1);
+	}
+	.desc {
+		font-size: 1.2rem;
+		@include overtext(2);
+	}
+	@include max-media($bk-d-992) {
+		.c-news-img {
+			padding-bottom: 13.588%;
+		}
+	}
+	@include max-media($bk-d-992) {
+		.c-news-img {
+			padding-bottom: 13.588%;
+		}
+	}
+}
+.c-news-related {
+	display: flex;
+	align-items: flex-start;
+	.c-news-img {
+		width: 12rem;
+		height: 10rem;
+		padding-bottom: 0;
+		img {
+			position: static;
+		}
+	}
+	.c-news-content {
+		width: calc(100% - 12rem);
+		padding-left: 1.2rem;
+		padding-top: 0;
+	}
+	.main-title {
+		@include lh(18, 16);
+	}
+	.desc {
+		font-size: 1.4rem;
+		@include overtext(1);
+	}
+	.readmore-btn {
+		&:before {
+			color: $main-cl;
+		}
+	}
+}

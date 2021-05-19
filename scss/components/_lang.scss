@@ -1,0 +1,91 @@
+.lang {
+	position: relative;
+	font-size: 1.2rem;
+	display: none;
+	&-item {
+		p,
+		a {
+			display: flex;
+			align-items: center;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 0.8rem 1.25rem;
+		}
+		img {
+			margin-left: 0.5rem;
+		}
+		&-active {
+			position: relative;
+			&:before {
+				content: '\f107';
+				font-family: 'FA';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	&-list {
+		background: rgb(230, 47, 48);
+		background: linear-gradient(
+			to bottom,
+			rgba(230, 47, 48, 1) 0%,
+			rgba(149, 48, 48, 1) 100%
+		);
+		position: absolute;
+		right: 0;
+		top: 100%;
+		transition: $t1 $cubic2;
+		box-shadow: 1rem 1rem 3rem rgba($color: $bg-b-cl, $alpha: 0.16);
+		width: 100%;
+		min-width: 10rem;
+		width: max-content;
+		@include hidden;
+		.lang-item {
+			a {
+				padding: 1.5rem;
+			}
+			&:hover {
+				background-color: $bg-w-cl;
+				a {
+					color: $main-cl;
+				}
+			}
+		}
+	}
+	&:hover {
+		.lang-list {
+			@include visible;
+		}
+	}
+	@include min-media($bk-992) {
+		display: block;
+	}
+}
+.lang-mobile {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	margin-top: 3rem;
+	padding: 1.5rem;
+	width: 100%;
+	color: $t-b-cl;
+	a {
+		font-weight: bold;
+		&.--active {
+			color: $main-2-cl;
+		}
+	}
+	a:nth-child(2) {
+		margin: 0 1rem;
+	}
+	img {
+		margin-top: -0.3rem;
+		margin-left: 0.5rem;
+		display: inline-block;
+	}
+	@include max-media($bk-d-992) {
+		display: flex;
+	}
+}

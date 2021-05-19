@@ -1,0 +1,49 @@
+.news-aside {
+}
+.news-aside-item {
+	~ .news-aside-item {
+		margin-top: 4rem;
+	}
+	> .main-title {
+		margin-bottom: 1.8rem;
+		&:before {
+			height: 0.2rem;
+		}
+	}
+}
+.news-aside-list {
+	max-height: 41rem;
+	overflow: hidden auto;
+	@include custom-scrollbar(0.2rem);
+	li ~ li {
+		padding-top: 1.5rem;
+		margin-top: 1.5rem;
+		border-top: 1px solid rgba($color: $bg-b-cl, $alpha: 0.1);
+	}
+}
+.news-aside-content {
+}
+.news-aside-cate {
+	padding-left: 2rem;
+	a {
+		@include lh(30, 14);
+	}
+}
+.news-aside-tags {
+	display: inline-flex;
+	flex-wrap: wrap;
+	a {
+		padding: 0.8rem;
+		background-color: $four-cl;
+		margin: 0.4rem;
+		transition: $t1;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		color: $main-cl;
+		&:hover {
+			background-color: darken($color: $four-cl, $amount: 50);
+			color: $t-w-cl;
+		}
+	}
+}

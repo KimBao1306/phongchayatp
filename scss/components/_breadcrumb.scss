@@ -1,0 +1,51 @@
+.sec-breadcrumb {
+	padding: 1.8rem 0;
+	.breadcrumb {
+		justify-content: flex-start;
+		a {
+			color: $t-b-cl;
+		}
+	}
+	+ *[class*='sec-'] {
+		padding-top: 4rem;
+	}
+}
+.breadcrumb {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	li {
+		position: relative;
+		&::after {
+			content: '\f105';
+			font-family: FA;
+			position: absolute;
+			top: 50%;
+			right: 1.2rem;
+			transform: translateY(-50%);
+			color: $main-cl;
+			font-size: 2rem;
+		}
+		&.--active a {
+			font-weight: bold;
+		}
+	}
+	li:last-child {
+		a {
+			padding: 0;
+		}
+		&::after {
+			display: none;
+		}
+	}
+	a {
+		padding-right: 3.6rem;
+		color: $t-w-cl;
+		transition: $t1 $cubic1;
+		text-transform: capitalize;
+		&:hover {
+			color: $main-cl;
+		}
+	}
+}

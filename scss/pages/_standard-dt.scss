@@ -1,0 +1,35 @@
+.main-standard-dt {
+}
+.standard-dt {
+	.mona-content {
+		ol {
+			counter-reset: num;
+		}
+		li {
+			display: block;
+			&:before {
+				content: counters(num, '.') '.';
+				counter-increment: num;
+			}
+		}
+		> ol > li {
+			&:before {
+				font-weight: bold;
+			}
+			li {
+				margin: 1em 0;
+			}
+			> div {
+				color: $desc-cl;
+				padding-left: 4rem;
+				> ol > li > div {
+					text-align: center;
+					color: $t-b-cl;
+					img {
+						margin: auto;
+					}
+				}
+			}
+		}
+	}
+}

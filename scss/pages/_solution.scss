@@ -1,0 +1,8 @@
+.main-solution,
+.main-solution-pd {
+	.banner-child-img {
+		&:before {
+			background-color: rgba($color: $bg-b-cl, $alpha: 0.3);
+		}
+	}
+}

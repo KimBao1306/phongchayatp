@@ -1,0 +1,81 @@
+.comment {
+	&-wrap {
+		padding-bottom: 6rem;
+		border-bottom: 1px solid $border-cl;
+		> .readmore-btn {
+			font-size: 1.6rem;
+		}
+	}
+	&-form {
+		position: relative;
+		display: flex;
+		.f-control {
+			width: calc(100% - 7rem);
+			background: $bg-w-cl;
+			&::placeholder {
+				color: rgba($color: $t-b-cl, $alpha: 0.5);
+			}
+		}
+		.readmore-btn {
+			position: absolute;
+			top: 50%;
+			right: 1.5rem;
+			transform: translateY(-50%);
+			border: 0;
+			outline: none;
+			background-color: transparent;
+			cursor: pointer;
+		}
+	}
+	&-item-wrap {
+		display: flex;
+	}
+	&-img {
+		width: 5rem;
+		height: 5rem;
+		margin-right: 2rem;
+	}
+	&-content {
+		width: calc(100% - 7rem);
+		.name {
+			font-weight: bold;
+		}
+		.status {
+			color: rgba($color: $t-b-cl, $alpha: 0.4);
+			margin-bottom: 0.8rem;
+			font-size: 1.2rem;
+		}
+		.desc {
+			margin-bottom: 1.2rem;
+		}
+		.readmore-btn {
+			font-size: 1.3rem;
+			text-transform: uppercase;
+			text-decoration: underline;
+			color: $t-b-cl;
+			@include lh(15, 13);
+		}
+	}
+	&-reply {
+		padding-left: 5.5rem;
+	}
+	&-control {
+		font-size: 1.4rem;
+		color: $second-cl;
+		font-weight: bold;
+		display: inline-block;
+		a:first-child {
+			margin-right: 2rem;
+		}
+	}
+	@include max-media($bk-d-1200) {
+		&-wrap {
+			padding-bottom: 4rem;
+		}
+	}
+	@include max-media($bk-d-768) {
+		&-reply {
+			padding-left: 3rem;
+		}
+	}
+}

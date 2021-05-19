@@ -1,0 +1,26 @@
+.pagination {
+	margin-top: 4rem;
+	text-align: center;
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		.page-numbers {
+			width: 5rem;
+			height: 5rem;
+			border-radius: 100%;
+			color: $t-b-cl;
+			font-weight: bold;
+			transition: $t1;
+			@include lh(24, 14);
+			@include mid-flex;
+			&.current {
+				background-color: $main-2-cl;
+				color: $t-w-cl;
+			}
+			&:hover {
+				background-color: $main-2-cl;
+				color: $t-w-cl;
+			}
+		}
+	}
+}

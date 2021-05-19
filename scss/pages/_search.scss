@@ -1,0 +1,36 @@
+.search {
+}
+.search-sort {
+	max-width: 31.4rem;
+	span {
+		color: $main-cl;
+	}
+	.f-control {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+.search-list {
+	padding-top: 3rem;
+	overflow: hidden;
+	.col {
+		width: 25%;
+	}
+}
+.searc-pagination {
+	text-align: center;
+}
+@include max-media($bk-d-992) {
+	.search-list {
+		.col {
+			width: calc(100% / 3);
+		}
+	}
+}
+@include max-media($bk-d-768) {
+	.search-list {
+		.col {
+			width: 50%;
+		}
+	}
+}

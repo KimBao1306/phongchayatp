@@ -1,0 +1,8 @@
+.main-video,
+.main-video-pd {
+	.banner-child-img {
+		&:before {
+			background-color: rgba($color: $main-cl, $alpha: 0.16);
+		}
+	}
+}
